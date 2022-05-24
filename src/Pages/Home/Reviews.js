@@ -13,7 +13,7 @@ const Reviews = () => {
 
     return (
         <div className='my-28 container'>
-            <h2 className='text-center m-10 text-3xl uppercase font-bold text-headText'>Our Popular Product: </h2>
+            <h2 className='text-center m-10 text-3xl uppercase font-bold text-headText'>What our Customers are saying: </h2>
 
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 {
