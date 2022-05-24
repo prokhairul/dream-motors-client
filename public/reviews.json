@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Khairul Islam",
+        "description": "There are some best quality products at there. Come and get",
+        "star": 5,
+        "img": "https://i.pravatar.cc/400?img=56"
+    },
+    {
+        "name": "Rumana K.",
+        "description": "The product is very much uncommon and maintained Brad quality.",
+        "star": 4.5,
+        "img": "https://i.pravatar.cc/400?img=5"
+    },
+    {
+        "name": "Robert",
+        "description": "Every product are up to the mark and best in quality.",
+        "star": 5,
+        "img": "https://i.pravatar.cc/400?img=67"
+    },
+    {
+        "name": "Mi Rony",
+        "description": "Biker's can put their trust on Dream Motor's",
+        "star": 4.7,
+        "img": "https://i.pravatar.cc/400?img=50"
+    },
+    {
+        "name": "Ayon Khan",
+        "description": "Best reliable place to buy bike accessories. Recommended!",
+        "star": 4,
+        "img": "https://i.pravatar.cc/400?img=54"
+    },
+    {
+        "name": "Jack",
+        "description": "I wanted to tell you DM big thanks for sending to my country",
+        "star": 5,
+        "img": "https://i.pravatar.cc/400?img=69"
+    }
+]

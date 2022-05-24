@@ -14,7 +14,7 @@ const Banner = () => {
                     <h1 class="lg:text-7xl text-5xl font-bold text-white tracking-widest">GAUGE</h1>
                     <h1 class="lg:text-7xl text-5xl font-bold text-white tracking-widest" >BUCKET</h1>
                     <p class="py-6 lg:w-6/12 text-white text-xl leading-relaxed">The DM Lowrider's Gauge Bucket allows you relocate the stock gauge to a more visible and ergonomic position. This beautifully machined piece encases your stock Harley gauges and mounts in a variety of different ways.</p>
-                    <button class="btn btn-primary">Purchase Now</button>
+                    <button class="btn btn-btnText text-white">Purchase Now</button>
                 </div>
             </div>
         </div>
