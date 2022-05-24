@@ -12,7 +12,6 @@ const Header = () => {
     </>
 
     return (
-
         <div class="navbar bg-gray-900">
             <div class="navbar-start pl-6">
                 <div class="dropdown">
