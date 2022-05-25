@@ -6,11 +6,11 @@ const Header = () => {
 
     const liItems = <>
         <li className='hover:bg-accent rounded-bl rounded-tr'> <Link to="/">Home</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/portfolio">Portfolio</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/products">Products</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/blogs">Blogs</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/about">About Us</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/contact">Contact</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/products">Products</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/portfolio">Portfolio</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Login</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Register</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/dashboard">Dashboard</Link></li>
