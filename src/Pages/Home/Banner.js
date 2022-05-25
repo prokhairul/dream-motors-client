@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bannerbg from '../../assets/images/banner-bg.webp'
 
 const Banner = () => {
@@ -14,7 +15,7 @@ const Banner = () => {
                     <h1 class="lg:text-7xl text-5xl font-bold text-white tracking-widest">GAUGE</h1>
                     <h1 class="lg:text-7xl text-5xl font-bold text-white tracking-widest" >BUCKET</h1>
                     <p class="py-6 lg:w-6/12 text-white text-xl leading-relaxed">The DM Lowrider's Gauge Bucket allows you relocate the stock gauge to a more visible and ergonomic position. This beautifully machined piece encases your stock Harley gauges and mounts in a variety of different ways.</p>
-                    <button class="btn btn-accent text-white font-bold">Purchase Now</button>
+                    <Link to="/products"><button class="btn btn-accent text-white font-bold">Purchase Now</button> </Link>
                 </div>
             </div>
         </div>

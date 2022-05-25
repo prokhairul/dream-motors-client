@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 
 const Header = () => {
 
     const liItems = <>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>Home</a></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>About Us</a></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>Blogs</a></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>Dashboard</a></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>Register</a></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><a>login</a></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'> <Link to="/">Home</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/portfolio">Portfolio</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/blogs">Blogs</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/about">About Us</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/contact">Contact</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/products">Products</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Login</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Register</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/dashboard">Dashboard</Link></li>
     </>
 
     return (
@@ -23,11 +27,11 @@ const Header = () => {
                         {liItems}
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl"> <img src={logo} /></a>
+                <Link to="/" class="btn btn-ghost normal-case text-xl"> <img src={logo} /></Link>
             </div>
 
             <div class="navbar-end pr-6 hidden lg:flex">
-                <ul class="menu menu-horizontal p-0 text-white font-sans antialiased uppercase font-medium">
+                <ul class="menu menu-horizontal p-0 text-white font-sans antialiased uppercase font-medium ">
                     {liItems}
                 </ul>
             </div>

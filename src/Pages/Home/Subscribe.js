@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Subscribe = () => {
     return (
@@ -13,7 +14,7 @@ const Subscribe = () => {
 
                     <div className='flex '>
                         <input type="text" placeholder="name@site.com" class="input input-bordered w-full pr-16" />
-                        <button class="btn btn-accent ml-2">Subscribe</button>
+                        <Link to="#"><button class="btn btn-accent ml-2">Subscribe</button></Link>
 
                     </div>
 

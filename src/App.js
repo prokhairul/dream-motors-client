@@ -7,6 +7,8 @@ import Footer from './Pages/Shared/Footer';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import Portfolio from './Pages/Portfolio/Portfolio';
+import Contact from './Pages/Shared/Contact';
 
 
 
@@ -21,6 +23,8 @@ function App() {
           <Route path='/home' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/blogs' element={<Blogs />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/portfolio' element={<Portfolio />}></Route>
         </Routes>
 
         <Footer></Footer>

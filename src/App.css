@@ -3,6 +3,10 @@
   height: 150px;
 }
 
+a:active {
+  background-color: #fc2865;
+}
+
 
 @media (min-width: 320px) and (max-width: 667px) {
 
