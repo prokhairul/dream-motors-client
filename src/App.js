@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='*' element={<NotFound />}></Route>
           <Route path='/home' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/blogs' element={<Blogs />}></Route>
