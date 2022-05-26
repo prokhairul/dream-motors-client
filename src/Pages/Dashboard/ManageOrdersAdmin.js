@@ -10,7 +10,7 @@ const ManageOrdersAdmin = () => {
 
     const [deletingProducts, setDeletingProducts] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/order', {
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('https://gentle-hamlet-26508.herokuapp.com/order', {
 
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: products, isLoading } = useQuery('product', () => fetch('http://localhost:5000/product').then(res => res.json()))
+    const { data: products, isLoading } = useQuery('product', () => fetch('https://gentle-hamlet-26508.herokuapp.com/product').then(res => res.json()))
     const imageStorageKey = '7faee02826d0b964d21ea59d5bcae4d1';
 
     const onSubmit = async data => {
@@ -31,7 +31,7 @@ const AddProduct = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/product', {
+                    fetch('https://gentle-hamlet-26508.herokuapp.com/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

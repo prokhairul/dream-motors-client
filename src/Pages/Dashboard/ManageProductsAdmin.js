@@ -10,7 +10,7 @@ const ManageProductsAdmin = () => {
 
     const [deletingProducts, setDeletingProducts] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://gentle-hamlet-26508.herokuapp.com/product', {
 
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -13,7 +13,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://gentle-hamlet-26508.herokuapp.com/product/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -24,7 +24,7 @@ const Purchase = () => {
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: order, isLoading } = useQuery('order', () => fetch('http://localhost:5000/order').then(res => res.json()))
+    const { data: order, isLoading } = useQuery('order', () => fetch('https://gentle-hamlet-26508.herokuapp.com/order').then(res => res.json()))
 
     const onSubmit = async data => {
 
@@ -36,7 +36,7 @@ const Purchase = () => {
             img: product.img
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://gentle-hamlet-26508.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

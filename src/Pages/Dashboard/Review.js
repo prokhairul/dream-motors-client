@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const Review = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: reviews, isLoading } = useQuery('product', () => fetch('http://localhost:5000/review').then(res => res.json()))
+    const { data: reviews, isLoading } = useQuery('product', () => fetch('https://gentle-hamlet-26508.herokuapp.com/review').then(res => res.json()))
     const imageStorageKey = '7faee02826d0b964d21ea59d5bcae4d1';
 
     const onSubmit = async data => {
@@ -29,7 +29,7 @@ const Review = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://gentle-hamlet-26508.herokuapp.com/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

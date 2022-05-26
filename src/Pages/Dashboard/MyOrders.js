@@ -11,7 +11,7 @@ const MyOrders = () => {
     // const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?user=${user.email}`, {
+            fetch(`https://gentle-hamlet-26508.herokuapp.com/order?user=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
