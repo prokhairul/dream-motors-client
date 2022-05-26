@@ -25,7 +25,7 @@ const Reviews = () => {
                 }
             </div>
             <div className='flex justify-center mt-10'>
-                <Link to="/reviews"><button class="btn btn-wide btn-outline btn-accent uppercase font-bold text-xl">All Reviews</button></Link>
+                <Link to="/reviews"><button className="btn btn-wide btn-outline btn-accent uppercase font-bold text-xl">All Reviews</button></Link>
             </div>
         </div>
     );

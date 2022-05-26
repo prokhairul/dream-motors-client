@@ -26,9 +26,9 @@ const ManageOrdersAdmin = () => {
 
     return (
         <div className='my-10 container'>
-            <h2>Total Products: {products.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

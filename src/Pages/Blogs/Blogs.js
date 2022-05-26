@@ -7,11 +7,11 @@ const Blogs = () => {
             <h3 className='text-center text-2xl uppercase font-bold text-primary m-10'>Questions / Answer </h3>
 
             <div className='grid grid-cols-1 gap-5'>
-                <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-                    <div class="collapse-title text-xl font-medium">
+                <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                    <div className="collapse-title text-xl font-medium">
                         How will you improve the performance of a React Application?
                     </div>
-                    <div class="collapse-content">
+                    <div className="collapse-content">
                         <p className='text-xl font-bold mb-5 text-slate-900'>Here the features and tricks that will help you optimize react apps performance.</p>
                         <p>
                             <ul>
@@ -40,11 +40,11 @@ const Blogs = () => {
                     </div>
                 </div>
 
-                <div tabindex="2" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-                    <div class="collapse-title text-xl font-medium">
+                <div tabindex="2" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                    <div className="collapse-title text-xl font-medium">
                         What are the different ways to manage a state in a React application?
                     </div>
-                    <div class="collapse-content">
+                    <div className="collapse-content">
                         <p className='text-xl font-bold'>The Four Kinds of React State to Manage</p>
                         <br />
                         <p>
@@ -74,11 +74,11 @@ const Blogs = () => {
                     </div>
                 </div>
 
-                <div tabindex="3" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-                    <div class="collapse-title text-xl font-medium">
+                <div tabindex="3" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                    <div className="collapse-title text-xl font-medium">
                         How does prototypical inheritance work?
                     </div>
-                    <div class="collapse-content">
+                    <div className="collapse-content">
                         <p>JavaScript is an Object Oriented programming language based on prototypes. JavaScript now supports "prototypal inheritance," which means that objects and methods can be shared, extended, and copied after the ES6 modifications. We frequently desire to extend something in programming. For instance, we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We'd like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it. Prototypal inheritance is a language feature that helps in that.</p> <br />
                         <p>
                             ▶ In JavaScript, all objects have a hidden [[Prototype]] property that's either another object or null. <br />
@@ -90,11 +90,11 @@ const Blogs = () => {
                     </div>
                 </div>
 
-                <div tabindex="4" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-                    <div class="collapse-title text-xl font-medium">
+                <div tabindex="4" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                    <div className="collapse-title text-xl font-medium">
                         Why should we not update the state directly?
                     </div>
-                    <div class="collapse-content">
+                    <div className="collapse-content">
                         <p className='text-xl font-bold '>One should never update the state directly because of the following reasons:</p>
                         <br />
                         <ul>
@@ -111,11 +111,11 @@ const Blogs = () => {
                     </div>
                 </div>
 
-                <div tabindex="5" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
-                    <div class="collapse-title text-xl font-medium">
+                <div tabindex="5" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                    <div className="collapse-title text-xl font-medium">
                         What is a unit test? Why should write unit tests?
                     </div>
-                    <div class="collapse-content">
+                    <div className="collapse-content">
                         <p> <strong>Unit Test:</strong>  </p>
                         <p>
                             Unit testing is a type of testing that examines a single software unit in isolation. This entails checking a function's or component's output for a given input. This could imply testing that the component renders successfully for the supplied props for React components.

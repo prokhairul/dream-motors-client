@@ -7,8 +7,8 @@ const DoctorRow = ({ product, index, refetch, setDeletingProducts }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td><div class="avatar">
-                <div class="w-16 rounded">
+            <td><div className="avatar">
+                <div className="w-16 rounded">
                     <img src={img} alt={name} />
                 </div>
             </div></td>
@@ -16,7 +16,7 @@ const DoctorRow = ({ product, index, refetch, setDeletingProducts }) => {
             <td>${price}</td>
             <td>{available}</td>
             <td>
-                <label onClick={() => setDeletingProducts(product)} for="delete-confirm-modal" class="btn btn-sm btn-accent">Delete</label>
+                <label onClick={() => setDeletingProducts(product)} for="delete-confirm-modal" className="btn btn-sm btn-accent">Delete</label>
             </td>
         </tr>
     );

@@ -12,6 +12,8 @@ const Purchase = () => {
     const [product, setProducts] = useState([]);
     const [user] = useAuthState(auth);
 
+    console.log(user.displayName)
+
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`;
 
@@ -27,6 +29,7 @@ const Purchase = () => {
     const { data: order, isLoading } = useQuery('order', () => fetch('http://localhost:5000/order').then(res => res.json()))
 
     const onSubmit = async data => {
+
         const order = {
             name: data.name,
             email: data.email,
@@ -63,19 +66,19 @@ const Purchase = () => {
 
     return (
         <div className='flex container justify-center  my-32'>
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card lg:card-side bg-base-100 shadow-xl">
 
                 <div>
                     <div>
                         <figure><img className='w-[350px]' src={product.img} alt="ProductImage" /></figure>
                     </div>
 
-                    <div class="card-body items-start">
-                        <h2 class=""> <strong>Product ID:</strong> {product._id}</h2>
-                        <h2 class=""> <strong>Product Name:</strong> {product.name} </h2>
-                        <h2 class=""> <strong>Price: </strong> ${product.price} <strong>/ Piece</strong></h2>
-                        <h2 class=""> <strong>Minimum Quantity: </strong> {product.min} <strong>Piece</strong> </h2>
-                        <h2 class=""> <strong>Available Stock: </strong> {product.available} <strong>Piece</strong> </h2>
+                    <div className="card-body items-start">
+                        <h2 className=""> <strong>Product ID:</strong> {product._id}</h2>
+                        <h2 className=""> <strong>Product Name:</strong> {product.name} </h2>
+                        <h2 className=""> <strong>Price: </strong> ${product.price} <strong>/ Piece</strong></h2>
+                        <h2 className=""> <strong>Minimum Quantity: </strong> {product.min} <strong>Piece</strong> </h2>
+                        <h2 className=""> <strong>Available Stock: </strong> {product.available} <strong>Piece</strong> </h2>
                     </div>
                 </div>
 
@@ -93,7 +96,7 @@ const Purchase = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="Your Name"
+                                    value={user?.displayName}
                                     className="input input-bordered w-full max-w-xs"
                                     {...register("name", {
                                         required: {
@@ -114,7 +117,7 @@ const Purchase = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="Yor Email Address"
+                                    value={user?.email}
                                     className="input input-bordered w-full max-w-xs"
                                     {...register("email", {
                                         required: {
@@ -155,14 +158,17 @@ const Purchase = () => {
                                     placeholder="Minimum Quantity"
                                     className="input input-bordered w-full max-w-xs"
                                     {...register("quantity", {
+                                        min: 100,
                                         required: {
                                             value: true,
                                             message: 'You have to add minimum 100 products'
-                                        }
+                                        },
+
+
                                     })}
                                 />
                                 <label className="label">
-                                    {errors.quantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors.quantity.message}</span>}
+                                    {errors.quantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors?.quantity.message}</span>}
                                 </label>
                             </div>
 

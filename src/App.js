@@ -21,6 +21,8 @@ import TotalReviews from './Pages/Shared/TotalReviews';
 import ManageProductsAdmin from './Pages/Dashboard/ManageProductsAdmin';
 import Purchase from './Pages/Products/Purchase';
 import ManageOrdersAdmin from './Pages/Dashboard/ManageOrdersAdmin'
+import MyProfile from './Pages/Dashboard/MyProfile';
+import Users from './Pages/Dashboard/Users';
 
 
 
@@ -40,7 +42,7 @@ function App() {
           <Route path='/allProducts' element={<AllProducts />}></Route>
           <Route path='/portfolio' element={<Portfolio />}></Route>
           <Route path='/reviews' element={<TotalReviews />}></Route>
-          <Route path='/purchase/:id' element={<Purchase />}></Route>
+          <Route path='/purchase/:id' element={<RequireAuth><Purchase /></RequireAuth>}></Route>
 
 
 
@@ -50,6 +52,8 @@ function App() {
             <Route path='review' element={<Review></Review>}></Route>
             <Route path='manageProductsAdmin' element={<ManageProductsAdmin></ManageProductsAdmin>}></Route>
             <Route path='manageOrdersAdmin' element={<ManageOrdersAdmin></ManageOrdersAdmin>}></Route>
+            <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
+            <Route path='users' element={<Users></Users>}></Route>
             <Route index element={<MyOrders></MyOrders>}></Route>
           </Route>
 
