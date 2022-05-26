@@ -14,7 +14,7 @@ import SignUp from './Pages/Login/SignUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import RequireAuth from './Pages/Login/RequireAuth';
 import AllProducts from './Pages/Products/AllProducts';
-import AddProducts from './Pages/Dashboard/AddProducts'
+import AddProduct from './Pages/Dashboard/AddProduct'
 import Review from './Pages/Dashboard/Review';
 
 
@@ -37,7 +37,7 @@ function App() {
 
 
           <Route path='/dashboard' element={<RequireAuth><Dashboard /></RequireAuth>}>
-            <Route path='addProduct' element={<AddProducts></AddProducts>}></Route>
+            <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
             <Route index element={<Review></Review>}></Route>
           </Route>
 
