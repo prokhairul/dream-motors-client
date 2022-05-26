@@ -5,7 +5,7 @@ const Subscribe = () => {
     return (
         <div>
             <div className="min-h-max bg-base-200">
-                <div className="flex container items-center justify-around ">
+                <div className="flex container items-center justify-around subs-small">
                     <div className="text-left m-10">
                         <h1 className="text-5xl font-bold">FIND OUT FIRST</h1>
                         <p className='pt-2 text-xl'>Don't miss out on new products and events.</p>

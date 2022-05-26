@@ -32,7 +32,7 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <div>
+      <div className='small-device'>
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='*' element={<NotFound />}></Route>

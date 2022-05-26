@@ -10,7 +10,7 @@ const Banner = () => {
 
         }} className="hero lg:min-h-screen bg-base-200">
             <div className="container flex-col lg:flex-row-reverse">
-                <div className='px-2'>
+                <div className='px-2 banner-design'>
                     <h2 className='font-sans font-bold lg:text-3xl text-2xl text-rose-500 mb-5'>LOWRIDER'S</h2>
                     <h1 className="lg:text-7xl text-5xl font-bold text-white tracking-widest">GAUGE</h1>
                     <h1 className="lg:text-7xl text-5xl font-bold text-white tracking-widest" >BUCKET</h1>

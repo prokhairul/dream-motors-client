@@ -14,4 +14,44 @@ a:active {
     width: 100%;
     height: auto;
   }
+
+  .small-device {
+    padding: 10px;
+
+  }
+
+  .subs-small {
+    flex-direction: column !important;
+  }
+
+  .subs-small .btn {
+    margin-bottom: 20px;
+  }
+
+  .goals-style h1 {
+    padding-left: 10px;
+  }
+
+  .goals-style p {
+    padding-left: 10px;
+  }
+
+  .goals-style .btn {
+    margin-left: 10px;
+  }
+
+  .goals-style img {
+    width: 350px;
+    height: 100%;
+    margin-left: 10px;
+  }
+
+  .banner-design .btn {
+    margin-bottom: 20px;
+  }
+
+  .banner-design h2 {
+    margin-top: 20px;
+  }
+
 }
