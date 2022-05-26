@@ -1,19 +1,34 @@
 import React from 'react';
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
+import auth from '../../firebase.init';
 
 const Header = () => {
 
+    const [user] = useAuthState(auth);
+
+    console.log(user);
+
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
+
     const liItems = <>
         <li className='hover:bg-accent rounded-bl rounded-tr'> <Link to="/">Home</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/products">Products</Link></li>
+        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/allProducts">Products</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/blogs">Blogs</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/about">About Us</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/contact">Contact</Link></li>
         <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/portfolio">Portfolio</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Login</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/login">Register</Link></li>
-        <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/dashboard">Dashboard</Link></li>
+        {
+            user && <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/dashboard">Dashboard</Link></li>
+        }
+        {
+            !user && <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/signup">Register</Link></li>
+        }
+        <li className='hover:bg-accent rounded-bl rounded-tr '>{user ? <button className="btn btn-accent rounded-bl rounded-tr hover:bg-accent border-0 ml-2" onClick={logout} >{user.displayName}</button> : <Link to="/login">Login</Link>}</li>
     </>
 
     return (
