@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Product = ({ product }) => {
+
+    const { _id } = product;
+    const navigate = useNavigate();
+
+    const navigateToPurchase = id => {
+        navigate(`/purchase/${id}`);
+    }
 
     return (
         <div className='container'>
@@ -15,7 +23,7 @@ const Product = ({ product }) => {
                     <div class="card-actions justify-start mt-5">
                         <div class="badge badge-neutral text-slate-600"> <strong>Min Qty : {product.min}</strong></div>
                         <div class="badge badge-neutral text-slate-600"><strong>Available : {product.available}</strong></div>
-                        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-xl btn-accent text-white font-bold mt-5">Purchase</button>
+                        <button onClick={() => navigateToPurchase(_id)} class="btn btn-xs sm:btn-sm md:btn-md lg:btn-xl btn-accent text-white font-bold mt-5">Purchase</button>
                     </div>
                 </div>
             </div>

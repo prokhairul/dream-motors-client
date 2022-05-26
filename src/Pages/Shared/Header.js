@@ -4,13 +4,11 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 import auth from '../../firebase.init';
+import logoutIcon from '../../assets/icons/logout.png'
 
 const Header = () => {
 
     const [user] = useAuthState(auth);
-
-    console.log(user);
-
     const logout = () => {
         signOut(auth);
         localStorage.removeItem('accessToken');
@@ -28,7 +26,7 @@ const Header = () => {
         {
             !user && <li className='hover:bg-accent rounded-bl rounded-tr'><Link to="/signup">Register</Link></li>
         }
-        <li className='hover:bg-accent rounded-bl rounded-tr '>{user ? <button className="btn btn-accent rounded-bl rounded-tr hover:bg-accent border-0 ml-2" onClick={logout} >{user.displayName}</button> : <Link to="/login">Login</Link>}</li>
+        <li className='hover:bg-accent rounded-bl rounded-tr '>{user ? <button className="btn btn-accent rounded-bl rounded-tr hover:bg-accent border-0 ml-2" onClick={logout} >{user.displayName} <img src={logoutIcon} alt="Logout" /></button> : <Link to="/login">Login</Link>}</li>
     </>
 
     return (

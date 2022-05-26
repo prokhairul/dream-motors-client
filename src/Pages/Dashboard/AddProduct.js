@@ -162,7 +162,7 @@ const AddProduct = () => {
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Photo</span>
+                        <span className="label-text">Product Image</span>
                     </label>
                     <input
                         type="file"

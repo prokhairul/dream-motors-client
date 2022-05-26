@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Review from './Review';
+import TotalReview from './TotalReview';
 
-const Reviews = () => {
+const TotalReviews = () => {
 
     const [reviews, setReviews] = useState([]);
 
@@ -18,17 +18,14 @@ const Reviews = () => {
 
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                 {
-                    reviews.slice(0, 4).map(review => <Review
+                    reviews.reverse().map(review => <TotalReview
                         key={review.name}
                         review={review}
-                    ></Review>)
+                    ></TotalReview>)
                 }
-            </div>
-            <div className='flex justify-center mt-10'>
-                <Link to="/reviews"><button class="btn btn-wide btn-outline btn-accent uppercase font-bold text-xl">All Reviews</button></Link>
             </div>
         </div>
     );
 };
 
-export default Reviews;
+export default TotalReviews;
