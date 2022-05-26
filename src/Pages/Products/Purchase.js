@@ -12,8 +12,6 @@ const Purchase = () => {
     const [product, setProducts] = useState([]);
     const [user] = useAuthState(auth);
 
-    console.log(user.displayName)
-
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`;
 

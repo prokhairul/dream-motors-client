@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-60 bg-slate-200 rounded text-slate-900 font-bold uppercase">
                     {!admin && <>
-                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard">My Orders</Link></li>
+                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/myOrder">My Orders</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/review">Add A Review</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/myProfile">My Profile</Link></li>
                     </>
